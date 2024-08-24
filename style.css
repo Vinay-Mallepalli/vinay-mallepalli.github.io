@@ -780,6 +780,9 @@ section {
         font-size: 1rem; /* Reduce title size */
         padding: 15px;
     }
+    .slide {
+        min-width: 50%; /* Override to make slides full width on smaller screens */
+    }
 }
   
 /* Contact section css */
