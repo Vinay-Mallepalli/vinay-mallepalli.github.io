@@ -111,33 +111,40 @@ const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((e1)=>observer.observe(e1));
 
 
-let slideIndex = 0;
 
-function showSlides() {
-  const slides = document.querySelectorAll('.slide');
-  const totalSlides = slides.length;
-  const visibleSlides = 3; // Number of slides visible at a time
 
-  // Calculate the maximum slide index to prevent overflow
-  const maxIndex = totalSlides - visibleSlides;
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const slideWidth = slides[0].clientWidth; // Get the width of a single slide
+    let slideIndex = 0;
 
-  // Ensure the slide index stays within the bounds
-  if (slideIndex > maxIndex) {
-    slideIndex = maxIndex;
-  } else if (slideIndex < 0) {
-    slideIndex = 0;
-  }
+    function showSlides() {
+        slider.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+    }
 
-  // Calculate the offset to shift the slides
-  const offset = -slideIndex * (100 / visibleSlides);
-  document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
-}
+    window.moveSlide = function(direction) {
+        const totalSlides = slides.length - 3; // Assuming 3 slides are visible at a time
+        slideIndex += direction;
 
-function moveSlide(direction) {
-  slideIndex += direction;
-  showSlides();
-}
+        if (slideIndex < 0) {
+            slideIndex = 0;
+        } else if (slideIndex > totalSlides) {
+            slideIndex = totalSlides;
+        }
 
-// Initialize the slider
-showSlides();
+        showSlides();
+    };
 
+    // Hover effect to pause and resume animation
+    const stopAnimation = () => {
+        slider.style.animationPlayState = 'paused';
+    };
+
+    const startAnimation = () => {
+        slider.style.animationPlayState = 'running';
+    };
+
+    slider.addEventListener('mouseenter', stopAnimation);
+    slider.addEventListener('mouseleave', startAnimation);
+});
