@@ -1,150 +1,54 @@
-let words = document.querySelectorAll(".word");
-words.forEach((word)=>{
-       let letters = word.textContent.split("");
-       word.textContent="";
-       letters.forEach((letter)=>{
-           let span = document.createElement("span");
-           span.textContent = letter;
-           span.className = "letter";
-           word.append(span);
-       });      
+// ─── AOS ───
+AOS.init({
+  duration: 420,
+  once: true,
+  easing: 'ease-out-cubic',
+  offset: 56,
 });
 
-let currentWordIndex = 0;
-let maxWordIndex = words.length -1;
-words[currentWordIndex].style.opacity = "1";
+// ─── DOM references (all declared before any function is called) ───
+const header     = document.getElementById('header');
+const navToggle  = document.getElementById('nav-toggle');
+const navList    = document.getElementById('nav-list');
+const toggleIcon = navToggle.querySelector('i');
+const sections   = Array.from(document.querySelectorAll('section[id]'));
+const navLinks   = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
 
-let changeText = ()=>{
-   let currentWord = words[currentWordIndex];
-   let nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex+1]
-
-   Array.from(currentWord.children).forEach((letter,i)=>{
-       setTimeout(()=>{
-           letter.className = "letter out";
-       },i *  80);
-   });
-   nextWord.style.opacity="1";
-   Array.from(nextWord.children).forEach((letter,i)=>{
-       letter.className="letter behind";
-       setTimeout(()=>{
-           letter.className="letter in";
-       },340 + i * 80);
-   });
-   currentWordIndex = currentWordIndex === maxWordIndex?0:currentWordIndex+1;
-};
-changeText();  
-setInterval(changeText,3000) 
-
-const circles = document.querySelectorAll('.circle');
-circles.forEach(elem=>{
-    var dots = elem.getAttribute("data-dots");
-    var marked = elem.getAttribute("data-percent");
-    var percent = Math.floor(dots *marked/100);
-    var points = "";
-    var rotate = 360 / dots;
-
-    for(let i = 0; i < dots ; i++){
-    points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
-    }
-    elem.innerHTML = points;
-
-    const pointsMarked = elem.querySelectorAll('.points');
-    for(let i = 0; i<percent; i++) {
-    pointsMarked[i].classList.add('marked')
-    }
-});
-
-
-// active menu
-let menuLi = document.querySelectorAll('header ul li a');
-let section = document.querySelectorAll('section');
-
-
-function activeMenu(){
-    let len = section.length;
-    while(--len && window.scrollY + 97 <section [len].offsetTop){}
-    menuLi.forEach(sec => sec.classList.remove("active"));
-    menuLi[len].classList.add("active");
-}
-activeMenu();
-window.addEventListener("scroll", activeMenu);
-
-
-
-const header = document.querySelector("header");
-window.addEventListener("scroll",function(){
-    header.classList.toggle("sticky",this.window.scrollY>50)
-})
-
-
-let menuIcon = document.querySelector("#menu-icon");
-let navlist = document.querySelector(".navlist");
-
-menuIcon.onclick = ()=>{
-    menuIcon.classList.toggle("bx-x");
-    navlist.classList.toggle("open");
+// ─── Functions ───
+function updateActiveNav() {
+  const scrollY = window.scrollY + 140;
+  let current = '';
+  for (const sec of sections) {
+    if (scrollY >= sec.offsetTop) current = sec.id;
+  }
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
 }
 
-window.onscroll = ()=>{
-    menuIcon.classList.remove("bx-x");
-    navlist.classList.remove("open");
+function closeMobileNav() {
+  if (!navList.classList.contains('nav-open')) return;
+  navList.classList.remove('nav-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  toggleIcon.className = 'bx bx-menu';
 }
 
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("show-items");
-        }else{
-            entry.target.classList.remove("show-items");
-        }
+function onScroll() {
+  header.classList.toggle('scrolled', window.scrollY > 48);
+  updateActiveNav();
+  closeMobileNav();
+}
 
-    });
+// ─── Event listeners ───
+window.addEventListener('scroll', onScroll, { passive: true });
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navList.classList.toggle('nav-open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+  toggleIcon.className = isOpen ? 'bx bx-x' : 'bx bx-menu';
 });
 
-const scrollScale = document.querySelectorAll(".scroll-scale");
-scrollScale.forEach((e1)=>observer.observe(e1));
+navLinks.forEach(link => link.addEventListener('click', closeMobileNav));
 
-const scrollBottom = document.querySelectorAll(".scroll-bottom");
-scrollBottom.forEach((e1)=>observer.observe(e1));
-
-const scrollTop = document.querySelectorAll(".scroll-top");
-scrollTop.forEach((e1)=>observer.observe(e1));
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const slideWidth = slides[0].clientWidth; // Get the width of a single slide
-    let slideIndex = 0;
-
-    function showSlides() {
-        slider.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
-    }
-
-    window.moveSlide = function(direction) {
-        const totalSlides = slides.length - 3; // Assuming 3 slides are visible at a time
-        slideIndex += direction;
-
-        if (slideIndex < 0) {
-            slideIndex = 0;
-        } else if (slideIndex > totalSlides) {
-            slideIndex = totalSlides;
-        }
-
-        showSlides();
-    };
-
-    // Hover effect to pause and resume animation
-    const stopAnimation = () => {
-        slider.style.animationPlayState = 'paused';
-    };
-
-    const startAnimation = () => {
-        slider.style.animationPlayState = 'running';
-    };
-
-    slider.addEventListener('mouseenter', stopAnimation);
-    slider.addEventListener('mouseleave', startAnimation);
-});
+// ─── Initial call (after all declarations) ───
+onScroll();

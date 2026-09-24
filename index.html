@@ -1,385 +1,817 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vinay's | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinay Mallepalli | Application Developer</title>
 
-  <body>
-    <!--header-->
-    <header>
-      <div class="logo">
-        <span class="spanClass">❤️ Win I</span> Welcomes
-        <span class="spanClass">U</span>
-      </div>
-      <ul class="navlist">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#services">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <meta name="description" content="Vinay Mallepalli — Application Developer and .NET Full Stack Engineer building enterprise-grade software with C#, ASP.NET Core, Angular, and Azure.">
+  <link rel="canonical" href="https://vinay-mallepalli.github.io/">
+
+  <meta property="og:title" content="Vinay Mallepalli | Application Developer">
+  <meta property="og:description" content="Application Developer and .NET Full Stack Engineer. C#, ASP.NET Core, Angular, Azure, Google Cloud.">
+  <meta property="og:url" content="https://vinay-mallepalli.github.io/">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vinay Mallepalli",
+    "jobTitle": "Application Developer",
+    "url": "https://vinay-mallepalli.github.io/",
+    "sameAs": [
+      "https://github.com/Vinay-Mallepalli",
+      "https://www.linkedin.com/in/vinay-mallepalli/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="header">
+    <nav class="nav" role="navigation" aria-label="Primary navigation">
+      <a href="#home" class="nav-logo">Vinay M.</a>
+      <ul class="nav-list" id="nav-list" role="list">
+        <li><a href="#home"          class="nav-link">Home</a></li>
+        <li><a href="#about"         class="nav-link">About</a></li>
+        <li><a href="#experience"    class="nav-link">Experience</a></li>
+        <li><a href="#skills"        class="nav-link">Skills</a></li>
+        <li><a href="#projects"      class="nav-link">Projects</a></li>
+        <li><a href="#cloud-devops"  class="nav-link">Cloud &amp; DevOps</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact"       class="nav-link nav-link--cta">Contact</a></li>
       </ul>
-      <div id="menu-icon" class="bx bx-menu"></div>
-    </header>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
+        <i class="bx bx-menu" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
 
-    <!--home-->
-    <section id="home" class="home">
-      <div class="home-content scroll-scale" data-aos="zoom-in-down">
-        <h1>Hey! This is Vinay</h1>
-        <div class="change-text">
-          <h3>And I'm</h3>
-          <h3>
-            <span class="word">Java &nbsp;Developer</span>
-            <span class="word">Java &nbsp;Backend-Dev</span>
-            <span class="word">Frontend &nbsp;Developer</span>
-            <span class="word">FullStack &nbsp;Developer</span>
-            <span class="word">Web &nbsp;Developer</span>
-            <span class="word">Software &nbsp;Developer</span>
-          </h3>
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="home" class="hero" aria-label="Introduction">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="600">
+        <p class="hero-label">Software Developer</p>
+        <h1 class="hero-name">Vinay Mallepalli</h1>
+        <p class="hero-tagline">Building reliable software from backend to cloud.</p>
+        <p class="hero-stack">.NET &nbsp;&bull;&nbsp; Full Stack &nbsp;&bull;&nbsp; Cloud &nbsp;&bull;&nbsp; DevOps</p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact"  class="btn btn--secondary">Let's Connect</a>
         </div>
-        <p>
-          Passionate Learner with a Unique Personality looking forward to Dive
-          into the Ocean of Technology..!
-        </p>
-        <div class="info-box">
-          <div class="email-info">
-            <h5>Email :</h5>
-            <span>mallepallivinay03@gmail.com</span>
-          </div>
-          <div class="social-icons">
-            <a
-              href="https://instagram.com/vinay.mallepalli?igshid=OGQ5ZDc2ODk2ZA=="
-              ><i class="bx bxl-instagram"></i
-            ></a>
-            <a href="https://github.com/Vinay-Mallepalli"
-              ><i class="bx bxl-github"></i
-            ></a>
-          </div>
+
+        <div class="hero-social">
+          <a href="https://github.com/Vinay-Mallepalli" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="GitHub profile">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vinay-mallepalli/" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="LinkedIn profile">
+            <i class="bx bxl-linkedin" aria-hidden="true"></i>
+          </a>
         </div>
-        <div class="btn-box">
-          <a
-            href="https://drive.google.com/uc?export=download&id=174_RYwR72hpYDRC1e2VfPDXp5Xc6dwjY"
-            class="btn"
-            >Show CV</a
-          >
+
+        <div class="hero-signals">
+          <div class="signal">
+            <span class="signal-number">2+</span>
+            <span class="signal-label">Years Experience</span>
+          </div>
+          <div class="signal-divider" aria-hidden="true"></div>
+          <div class="signal">
+            <span class="signal-number">.NET</span>
+            <span class="signal-label">Full Stack</span>
+          </div>
+          <div class="signal-divider" aria-hidden="true"></div>
+          <div class="signal">
+            <span class="signal-number">11+</span>
+            <span class="signal-label">Credentials</span>
+          </div>
         </div>
       </div>
 
-      <div class="home-image scroll-scale">
-        <div class="img-box">
-          <img src="vinay5.png" alt="Vinay's Image" />
-        </div>
-      </div>
-    </section>
-
-    <!--about section-->
-    <section class="about" id="about">
-      <div class="img-about scroll-scale">
-        <img src="IMG_20230920_210215.jpg" alt="Vinay Mallepalli" />
-      </div>
-
-      <div class="about-content scroll-scale">
-        <h2>About Me</h2>
-        <h3>Greetings.!</h3>
-        <p>
-          I am Vinay Mallepalli, graduated from IIIT RK-Valley in the stream of
-          Electronics and Communication Engineering. I'm a Java full-stack
-          developer with a passion for creating web applications that are
-          user-friendly, scalable, and secure. I have a good command on Java,
-          JDBC, Servlet, JSP, Spring, SpringBoot, Hibernate, HTML, CSS,
-          JavaScript, SQL, Git and Github. I consider myself as a passionate
-          learner, self-motivated person and I always love spending and
-          investing time with myself. I'm always eager to learn new technologies
-          and frameworks, and I enjoy working in a team as well as
-          independently. I'm looking for opportunities to apply my skills and
-          grow as a developer.
-        </p>
-
-        <div class="btn-box">
-          <a href="https://www.linkedin.com/in/vinay-mallepalli/" class="btn1"
-            >Read More!</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!--skills-->
-    <section id="skills" class="skills">
-      <div class="main-text scroll-scale">
-        <h2>Skills</h2>
-      </div>
-
-      <div class="skill-main">
-        <div class="skill-left scroll-scale">
-          <h3>Technical Skills</h3>
-          <div class="skill-bar">
-            <div class="info">
-              <p>Java, J2EE, Hibernate, SpringBoot, SQL</p>
-              <p>90%</p>
-            </div>
-            <div class="bar">
-              <span class="java"></span>
-            </div>
+      <div class="hero-visual" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+        <div class="hero-terminal" aria-hidden="true">
+          <div class="t-bar">
+            <span class="t-dot t-dot--red"></span>
+            <span class="t-dot t-dot--yellow"></span>
+            <span class="t-dot t-dot--green"></span>
+            <span class="t-filename">developer.profile</span>
           </div>
-
-          <div class="skill-bar">
-            <div class="info">
-              <p>Python, PHP, Laravel, C</p>
-              <p>85%</p>
-            </div>
-            <div class="bar">
-              <span class="j2ee"></span>
-            </div>
-          </div>
-
-          <div class="skill-bar">
-            <div class="info">
-              <p>HTML, CSS, JavaScript, BootStrap</p>
-              <p>90%</p>
-            </div>
-            <div class="bar">
-              <span class="html"></span>
-            </div>
-          </div>
-
-          <div class="skill-bar">
-            <div class="info">
-              <p>ML, AI</p>
-              <p>85%</p>
-            </div>
-            <div class="bar">
-              <span class="css"></span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-right scroll-scale">
-          <h3>Soft Skills</h3>
-          <div class="professional">
-            <div class="box">
-              <div class="circle" data-dots="50" data-percent="95"></div>
-              <div class="text">
-                <big>95%</big>
-                <small>Communication</small>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="circle" data-dots="50" data-percent="98"></div>
-              <div class="text">
-                <big>98%</big>
-                <small>Problem Solving</small>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="circle" data-dots="50" data-percent="95"></div>
-              <div class="text">
-                <big>95%</big>
-                <small>Critical Thinking</small>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="circle" data-dots="50" data-percent="95"></div>
-              <div class="text">
-                <big>95%</big>
-                <small>Team Player</small>
-              </div>
-            </div>
+          <div class="t-body">
+            <p class="t-line"><span class="t-comment">// Vinay Mallepalli</span></p>
+            <p class="t-line t-gap"></p>
+            <p class="t-line"><span class="t-key">role</span><span class="t-sep">     :</span><span class="t-val"> Application Developer</span></p>
+            <p class="t-line"><span class="t-key">company</span><span class="t-sep">  :</span><span class="t-val"> Accenture</span></p>
+            <p class="t-line"><span class="t-key">project</span><span class="t-sep">  :</span><span class="t-val"> GCP</span></p>
+            <p class="t-line"><span class="t-key">stack</span><span class="t-sep">    :</span><span class="t-val"> .NET · C# · Angular</span></p>
+            <p class="t-line"><span class="t-key">cloud</span><span class="t-sep">    :</span><span class="t-val"> Azure · Google Cloud</span></p>
+            <p class="t-line"><span class="t-key">creds</span><span class="t-sep">    :</span><span class="t-val"> 11+ verified</span></p>
+            <p class="t-line t-gap"></p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd"> currently building</span></p>
+            <p class="t-line"><span class="t-str">  "enterprise .NET applications"</span></p>
+            <p class="t-line t-gap"></p>
+            <p class="t-line"><span class="t-key">status</span><span class="t-sep">   :</span><span class="t-val"> <span class="status-dot"></span>active</span></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!--Services/projects-->
-    <section id="services" class="services">
-      <div class="main-text">
-        <h2>My Projects</h2>
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about" class="about" aria-label="About me">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Who I Am</h2>
       </div>
-
-      <div class="slider-container" data-aos="zoom-in-up">
-        <!-- <button class="prev" onclick="moveSlide(-1)">&#10094;</button> -->
-        <div class="slider-wrapper">
-          <div class="slider">
-            <div class="slide service-box">
-              <i class="bx bxs-building-house service-icon"></i>
-              <h3>Housing Billing Automation</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/HousingBoard-Billing-Laravel"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
-            <div class="slide service-box">
-              <i class="bx bx-desktop service-icon"></i>
-              <h3>A Full-Stack Blog Application</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/Full-Stack-Blog-Application"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
-            <div class="slide service-box">
-              <i class="bx bxs-face service-icon"></i>
-              <h3>Face Swapping Using ML</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/Face-Swapping-Python"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
-            <!-- Additional Dummy Projects -->
-            <div class="slide service-box">
-              <i class="bx bxs-chat service-icon"></i>
-              <h3>WhatsApp Phonepe Integration</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/Meta-Cloud-API-Phonepe-Integration"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
-            <div class="slide service-box">
-              <i class="bx bxs-user service-icon"></i>
-              <h3>User Management System</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/User-Management-System-Java"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
-            <div class="slide service-box">
-              <i class="bx bxs-microphone service-icon"></i>
-              <h3>Voice Assistant Using Python</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/Voice-Assistant-Using-Python"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
-            <div class="slide service-box">
-              <i class="bx bxs-tag service-icon"></i>
-              <h3>Smart Attendance System RFID</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/Smart-Attendance-System-using-RFID-Major-Project"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
-            <div class="slide service-box">
-              <i class="bx bxs-wallet service-icon"></i>
-              <h3>Banking System Java</h3>
-              <div class="btn-box1 service-btn">
-                <a
-                  href="https://github.com/Vinay-Mallepalli/Banking-System-Java"
-                  class="btn1"
-                  >Read More</a
-                >
-              </div>
-            </div>
+      <div class="about-body" data-aos="fade-up">
+        <div class="about-text-col">
+          <p class="about-text">
+            I'm a software engineer and .NET Full Stack Developer currently working as an Application Developer at Accenture.
+            I focus on building reliable, enterprise-grade applications - from backend APIs and data layers to frontend
+            interfaces and cloud delivery pipelines.
+          </p>
+          <p class="about-text">
+            My day-to-day work spans C#, ASP.NET Core, Entity Framework, SQL Server, Angular, and cloud platforms
+            including Azure and Google Cloud. I care about writing clean, maintainable code and understanding the full
+            development and delivery lifecycle.
+          </p>
+          <p class="about-text">
+            I hold certifications and credentials across Microsoft Azure, GitHub, Google Cloud, and Anthropic —
+            spanning cloud architecture, DevOps, and Agentic AI development. I'm looking for opportunities at
+            product-focused companies where engineering quality and thoughtful system design matter.
+          </p>
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/vinay-mallepalli/" target="_blank" rel="noopener noreferrer"
+               class="btn btn--primary">
+              <i class="bx bxl-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Vinay-Mallepalli" target="_blank" rel="noopener noreferrer"
+               class="btn btn--secondary">
+              <i class="bx bxl-github" aria-hidden="true"></i> GitHub
+            </a>
           </div>
         </div>
-        <!-- <button class="next" onclick="moveSlide(1)">&#10095;</button> -->
+        <div class="about-facts" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-fact">
+            <span class="about-fact-label">Role</span>
+            <span class="about-fact-value">Application Developer</span>
+          </div>
+          <div class="about-fact">
+            <span class="about-fact-label">Company</span>
+            <span class="about-fact-value">Accenture</span>
+          </div>
+          <div class="about-fact">
+            <span class="about-fact-label">Stack</span>
+            <span class="about-fact-value">.NET · Angular · Azure</span>
+          </div>
+          <div class="about-fact">
+            <span class="about-fact-label">Experience</span>
+            <span class="about-fact-value">2+ Years</span>
+          </div>
+          <div class="about-fact">
+            <span class="about-fact-label">Credentials</span>
+            <span class="about-fact-value">15 Verified</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!--contact-->
-    <section id="contact" class="contant">
-      <div data-aos="fade-up">
-        <div class="main-text">
-          <h2 class="contactMe">Contact Me</h2>
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section id="experience" class="experience" aria-label="Work experience">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline" data-aos="fade-up">
+        <div class="timeline-line" aria-hidden="true"></div>
+        <article class="timeline-entry">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <h3 class="timeline-company">Accenture</h3>
+                <p class="timeline-role">Application Developer</p>
+                <p class="timeline-date">
+                  <i class="bx bx-calendar" aria-hidden="true"></i>
+                  Jan 2025 – Present
+                </p>
+              </div>
+              <span class="timeline-badge">GCP Hub</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Contributing to the development and enhancement of GCP Hub, an enterprise application supporting global career and employee mobility workflows.</li>
+              <li>Developing and maintaining backend functionality using C#, .NET, ASP.NET MVC/Core, SQL Server, Entity Framework and LINQ.</li>
+              <li>Implementing business requirements and change requests across application workflows, reports, notifications and employee-related processes.</li>
+              <li>Designing and optimizing SQL queries and stored procedures to support application functionality, reporting and production requirements.</li>
+              <li>Working on frontend enhancements using HTML, CSS, JavaScript and Angular to improve usability and application workflows.</li>
+              <li>Investigating and resolving production defects, including data issues, workflow problems and concurrency-related scenarios.</li>
+              <li>Contributing to application reliability through unit testing, debugging, code reviews and structured defect analysis.</li>
+              <li>Working with Git/GitHub and cloud technologies as part of the development and delivery lifecycle.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">.NET</span>
+              <span class="tech-tag">ASP.NET Core</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Entity Framework</span>
+              <span class="tech-tag">LINQ</span>
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Azure</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-entry">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <h3 class="timeline-company">Town Contacts Technologies Pvt. Ltd.</h3>
+                <p class="timeline-role">Software Developer</p>
+                <p class="timeline-date">
+                  <i class="bx bx-calendar" aria-hidden="true"></i>
+                  2024
+                </p>
+              </div>
+            </div>
+            <p class="timeline-desc">Web development using PHP and Laravel.</p>
+            <div class="timeline-tags">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ ENGINEERING FOCUS ═══ -->
+    <section class="focus" aria-label="Engineering focus areas">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Focus</p>
+        <h2 class="section-title">Engineering Areas</h2>
+      </div>
+      <div class="focus-grid">
+        <article class="focus-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="focus-icon"><i class="bx bx-server" aria-hidden="true"></i></div>
+          <h3 class="focus-title">Backend Engineering</h3>
+          <p class="focus-desc">Building server-side systems and data layers with C#, .NET, ASP.NET Core, Entity Framework, LINQ, and SQL Server. Focused on reliability, correctness, and maintainability.</p>
+        </article>
+        <article class="focus-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="focus-icon"><i class="bx bx-layer" aria-hidden="true"></i></div>
+          <h3 class="focus-title">Full Stack Development</h3>
+          <p class="focus-desc">Building end-to-end applications across Angular, React, and .NET backends. From API design and data modelling to responsive, accessible user interfaces.</p>
+        </article>
+        <article class="focus-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="focus-icon"><i class="bx bx-cloud" aria-hidden="true"></i></div>
+          <h3 class="focus-title">Cloud &amp; DevOps</h3>
+          <p class="focus-desc">Working across Azure, Google Cloud, GitHub Actions and CI/CD pipelines. Understanding the full delivery lifecycle from development through cloud deployment.</p>
+        </article>
+        <article class="focus-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="focus-icon"><i class="bx bx-chip" aria-hidden="true"></i></div>
+          <h3 class="focus-title">AI &amp; Emerging Technology</h3>
+          <p class="focus-desc">Exploring AI and Agentic AI development workflows. Certified in Agentic AI development and AI architecture foundations through GitHub and Anthropic programs.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills" class="skills" aria-label="Technical skills">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="skill-group-title">Backend Engineering</h3>
+          <div class="skill-tags">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">.NET</span>
+            <span class="tech-tag">ASP.NET Core</span>
+            <span class="tech-tag">Entity Framework</span>
+            <span class="tech-tag">LINQ</span>
+            <span class="tech-tag">SQL Server</span>
+          </div>
+        </div>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="80">
+          <h3 class="skill-group-title">Frontend</h3>
+          <div class="skill-tags">
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+          </div>
+        </div>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="160">
+          <h3 class="skill-group-title">Cloud &amp; DevOps</h3>
+          <div class="skill-tags">
+            <span class="tech-tag">Azure</span>
+            <span class="tech-tag">Google Cloud</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">DevOps</span>
+          </div>
+        </div>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="240">
+          <h3 class="skill-group-title">Other &amp; AI</h3>
+          <div class="skill-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">AI</span>
+            <span class="tech-tag">Agentic AI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section id="projects" class="projects" aria-label="Projects">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Personal Projects</h2>
+        <p class="section-subtitle">A selection of personal and academic projects. More projects on GitHub.</p>
+      </div>
+
+      <!-- Featured -->
+      <div class="projects-featured" data-aos="fade-up">
+        <article class="project-card project-card--featured">
+          <div class="project-card-header">
+            <i class="bx bxs-building-house project-icon" aria-hidden="true"></i>
+            <span class="project-type-badge">Personal Project</span>
+          </div>
+          <h3 class="project-title">Housing Billing Automation</h3>
+          <p class="project-desc">Housing board billing management system built with PHP and Laravel.</p>
+          <div class="project-tags">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Laravel</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/HousingBoard-Billing-Laravel"
+             target="_blank" rel="noopener noreferrer" class="project-link"
+             aria-label="View Housing Billing Automation on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i> View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card project-card--featured">
+          <div class="project-card-header">
+            <i class="bx bx-desktop project-icon" aria-hidden="true"></i>
+            <span class="project-type-badge">Personal Project</span>
+          </div>
+          <h3 class="project-title">Full-Stack Blog Application</h3>
+          <p class="project-desc">Full-stack web blog application with end-to-end functionality.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Full Stack</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/Full-Stack-Blog-Application"
+             target="_blank" rel="noopener noreferrer" class="project-link"
+             aria-label="View Full-Stack Blog Application on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i> View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card project-card--featured">
+          <div class="project-card-header">
+            <i class="bx bxs-chat project-icon" aria-hidden="true"></i>
+            <span class="project-type-badge">Personal Project</span>
+          </div>
+          <h3 class="project-title">WhatsApp PhonePe Integration</h3>
+          <p class="project-desc">WhatsApp messaging integrated with PhonePe payment gateway via Meta Cloud API.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Meta Cloud API</span>
+            <span class="tech-tag">PhonePe</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/Meta-Cloud-API-Phonepe-Integration"
+             target="_blank" rel="noopener noreferrer" class="project-link"
+             aria-label="View WhatsApp PhonePe Integration on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i> View on GitHub
+          </a>
+        </article>
+      </div>
+
+      <!-- Smaller cards -->
+      <div class="projects-grid" data-aos="fade-up">
+        <article class="project-card project-card--small">
+          <i class="bx bxs-face project-icon-sm" aria-hidden="true"></i>
+          <h3 class="project-title-sm">Face Swapping Using ML</h3>
+          <div class="project-tags-sm">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">ML</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/Face-Swapping-Python"
+             target="_blank" rel="noopener noreferrer" class="project-link-sm"
+             aria-label="View Face Swapping on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project-card project-card--small">
+          <i class="bx bxs-user project-icon-sm" aria-hidden="true"></i>
+          <h3 class="project-title-sm">User Management System</h3>
+          <div class="project-tags-sm">
+            <span class="tech-tag">Java</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/User-Management-System-Java"
+             target="_blank" rel="noopener noreferrer" class="project-link-sm"
+             aria-label="View User Management System on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project-card project-card--small">
+          <i class="bx bxs-microphone project-icon-sm" aria-hidden="true"></i>
+          <h3 class="project-title-sm">Voice Assistant Using Python</h3>
+          <div class="project-tags-sm">
+            <span class="tech-tag">Python</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/Voice-Assistant-Using-Python"
+             target="_blank" rel="noopener noreferrer" class="project-link-sm"
+             aria-label="View Voice Assistant on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project-card project-card--small">
+          <i class="bx bxs-tag project-icon-sm" aria-hidden="true"></i>
+          <h3 class="project-title-sm">Smart Attendance RFID</h3>
+          <div class="project-tags-sm">
+            <span class="tech-tag">RFID</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/Smart-Attendance-System-using-RFID-Major-Project"
+             target="_blank" rel="noopener noreferrer" class="project-link-sm"
+             aria-label="View Smart Attendance System on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project-card project-card--small">
+          <i class="bx bxs-wallet project-icon-sm" aria-hidden="true"></i>
+          <h3 class="project-title-sm">Banking System Java</h3>
+          <div class="project-tags-sm">
+            <span class="tech-tag">Java</span>
+          </div>
+          <a href="https://github.com/Vinay-Mallepalli/Banking-System-Java"
+             target="_blank" rel="noopener noreferrer" class="project-link-sm"
+             aria-label="View Banking System on GitHub">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ CLOUD & DEVOPS ═══ -->
+    <section id="cloud-devops" class="cloud-devops" aria-label="Cloud and DevOps">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Cloud &amp; DevOps</p>
+        <h2 class="section-title">Development Lifecycle</h2>
+        <p class="section-subtitle">Tools and platforms I work with across the development and delivery lifecycle.</p>
+      </div>
+      <div class="lifecycle" data-aos="fade-up">
+        <div class="lifecycle-stage">
+          <div class="lifecycle-icon"><i class="bx bx-code-alt" aria-hidden="true"></i></div>
+          <h3 class="lifecycle-title">Code</h3>
+          <div class="lifecycle-tags">
+            <span class="tech-tag">C# / .NET</span>
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">SQL Server</span>
+          </div>
+        </div>
+        <div class="lifecycle-arrow" aria-hidden="true"><i class="bx bx-chevron-right"></i></div>
+        <div class="lifecycle-stage">
+          <div class="lifecycle-icon"><i class="bx bxl-git" aria-hidden="true"></i></div>
+          <h3 class="lifecycle-title">Version Control</h3>
+          <div class="lifecycle-tags">
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub</span>
+          </div>
+        </div>
+        <div class="lifecycle-arrow" aria-hidden="true"><i class="bx bx-chevron-right"></i></div>
+        <div class="lifecycle-stage">
+          <div class="lifecycle-icon"><i class="bx bx-infinite" aria-hidden="true"></i></div>
+          <h3 class="lifecycle-title">CI / CD</h3>
+          <div class="lifecycle-tags">
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">DevOps</span>
+          </div>
+        </div>
+        <div class="lifecycle-arrow" aria-hidden="true"><i class="bx bx-chevron-right"></i></div>
+        <div class="lifecycle-stage">
+          <div class="lifecycle-icon"><i class="bx bx-cloud" aria-hidden="true"></i></div>
+          <h3 class="lifecycle-title">Cloud</h3>
+          <div class="lifecycle-tags">
+            <span class="tech-tag">Azure</span>
+            <span class="tech-tag">Google Cloud</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CERTIFICATIONS ═══ -->
+    <section id="certifications" class="certifications" aria-label="Certifications">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Certifications &amp; Credentials</p>
+        <h2 class="section-title">Verified Credentials</h2>
+      </div>
+
+      <!-- Microsoft Azure -->
+      <div class="certs-group" data-aos="fade-up">
+        <h3 class="certs-group-title">Microsoft Azure</h3>
+        <div class="certs-grid">
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--azure"><i class="bx bxl-microsoft" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">AZ-900</span>
+              <h4 class="cert-name">Azure Fundamentals</h4>
+              <p class="cert-issuer">Microsoft</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--azure"><i class="bx bxl-microsoft" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">AZ-104</span>
+              <h4 class="cert-name">Azure Administrator</h4>
+              <p class="cert-issuer">Microsoft</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--azure"><i class="bx bxl-microsoft" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">AZ-204</span>
+              <h4 class="cert-name">Developing Solutions for Azure</h4>
+              <p class="cert-issuer">Microsoft</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--azure"><i class="bx bxl-microsoft" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">AZ-400</span>
+              <h4 class="cert-name">Designing and Implementing DevOps Solutions</h4>
+              <p class="cert-issuer">Microsoft</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- GitHub -->
+      <div class="certs-group" data-aos="fade-up">
+        <h3 class="certs-group-title">GitHub</h3>
+        <div class="certs-grid">
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--github"><i class="bx bxl-github" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">GH-300</span>
+              <h4 class="cert-name">GitHub Copilot</h4>
+              <p class="cert-issuer">GitHub</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--github"><i class="bx bxl-github" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">GH-600</span>
+              <h4 class="cert-name">GitHub Certified: Agentic AI Developer</h4>
+              <p class="cert-issuer">GitHub</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Google Cloud -->
+      <div class="certs-group" data-aos="fade-up">
+        <h3 class="certs-group-title">Google Cloud</h3>
+        <div class="certs-grid">
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--google"><i class="bx bxl-google" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">ASSOCIATE</span>
+              <h4 class="cert-name">Associate Cloud Engineer</h4>
+              <p class="cert-issuer">Google Cloud</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--google"><i class="bx bxl-google" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">PROFESSIONAL</span>
+              <h4 class="cert-name">Professional Cloud Architect</h4>
+              <p class="cert-issuer">Google Cloud</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--google"><i class="bx bxl-google" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">PARTNER SPECIALIST</span>
+              <h4 class="cert-name">Gemini Enterprise Agent Development</h4>
+              <p class="cert-issuer">Google Cloud</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Anthropic -->
+      <div class="certs-group" data-aos="fade-up">
+        <h3 class="certs-group-title">Anthropic</h3>
+        <div class="certs-grid">
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--claude"><i class="bx bx-brain" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">CERTIFIED ARCHITECT</span>
+              <h4 class="cert-name">Claude Certified Architect — Foundations</h4>
+              <p class="cert-issuer">Anthropic</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--claude"><i class="bx bx-brain" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <span class="cert-code">CERTIFIED DEVELOPER</span>
+              <h4 class="cert-name">Claude Certified Developer — Foundations</h4>
+              <p class="cert-issuer">Anthropic</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Additional Credentials -->
+      <div class="certs-group" data-aos="fade-up">
+        <h3 class="certs-group-title">Additional Credentials</h3>
+        <div class="certs-grid">
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--badge"><i class="bx bxs-badge-check" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <h4 class="cert-name">Deploy an Agent with Agent Development Kit (ADK)</h4>
+              <p class="cert-issuer">Google Cloud / Anthropic</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--badge"><i class="bx bxs-badge-check" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <h4 class="cert-name">Evaluate and Improve ADK Agents</h4>
+              <p class="cert-issuer">Google Cloud / Anthropic</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--badge"><i class="bx bxs-badge-check" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <h4 class="cert-name">Accelerate Development with Antigravity</h4>
+              <p class="cert-issuer">Credential</p>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon cert-icon--badge"><i class="bx bxs-badge-check" aria-hidden="true"></i></div>
+            <div class="cert-content">
+              <h4 class="cert-name">Reinvention with Agentic AI</h4>
+              <p class="cert-issuer">Credential</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="contact" aria-label="Contact">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Open to new opportunities in software engineering. Feel free to reach out.</p>
+      </div>
+      <div class="contact-grid" data-aos="fade-up">
+        <div class="contact-links">
+          <a href="https://github.com/Vinay-Mallepalli" target="_blank" rel="noopener noreferrer"
+             class="contact-link-item" aria-label="GitHub profile">
+            <div class="contact-link-icon"><i class="bx bxl-github" aria-hidden="true"></i></div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/Vinay-Mallepalli</span>
+            </div>
+            <i class="bx bx-link-external contact-link-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vinay-mallepalli/" target="_blank" rel="noopener noreferrer"
+             class="contact-link-item" aria-label="LinkedIn profile">
+            <div class="contact-link-icon"><i class="bx bxl-linkedin" aria-hidden="true"></i></div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">linkedin.com/in/vinay-mallepalli</span>
+            </div>
+            <i class="bx bx-link-external contact-link-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:mallepallivinay03@gmail.com"
+             class="contact-link-item" aria-label="Send email">
+            <div class="contact-link-icon"><i class="bx bx-envelope" aria-hidden="true"></i></div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">mallepallivinay03@gmail.com</span>
+            </div>
+            <i class="bx bx-link-external contact-link-arrow" aria-hidden="true"></i>
+          </a>
         </div>
 
-        <form id="contact-form">
-          <input type="text" name="name" placeholder="Your Name" />
-          <input type="text" name="email" placeholder="Your Email" />
-          <input type="number" name="phone" placeholder="Phone Number" />
-          <textarea
-            name="message"
-            id=""
-            cols="30"
-            rows="5"
-            placeholder="Your Message"
-          ></textarea>
-          <div class="btn-box formBtn">
-            <button type="submit" class="btn">Send Message</button>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Name</label>
+            <input type="text" id="contact-name" name="name" class="form-input"
+                   placeholder="Your name" required autocomplete="name">
           </div>
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email</label>
+            <input type="email" id="contact-email" name="email" class="form-input"
+                   placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Message</label>
+            <textarea id="contact-message" name="message" class="form-textarea"
+                      placeholder="Your message..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
         </form>
       </div>
     </section>
 
-    <!--footer-->
-    <footer>
-      <p>
-        Crafted with <span class="love-symbol">❤️</span> by Vinay Mallepalli
-      </p>
-      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-    </footer>
+  </main>
 
-    <script src="script.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.emailjs.com/dist/email.min.js"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-name">Vinay Mallepalli</p>
+        <p class="footer-role">Application Developer</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/Vinay-Mallepalli" target="_blank" rel="noopener noreferrer"
+           class="footer-icon-link" aria-label="GitHub">
+          <i class="bx bxl-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/vinay-mallepalli/" target="_blank" rel="noopener noreferrer"
+           class="footer-icon-link" aria-label="LinkedIn">
+          <i class="bx bxl-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="#home" class="footer-icon-link footer-top" aria-label="Back to top">
+          <i class="bx bx-up-arrow-alt" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 &middot; Built with purpose</p>
+  </footer>
 
-    <script>
-      AOS.init();
-    </script>
+  <!--
+  EDUCATION SECTION — awaiting details from Vinay.
+  Uncomment and populate when ready.
 
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("PMHnYqoDKzi7TAc4u");
-      })();
-    </script>
-    <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+  <section id="education" class="education" aria-label="Education">
+    <div class="section-header">
+      <p class="section-label">Education</p>
+      <h2 class="section-title">Academic Background</h2>
+    </div>
+    <div class="education-timeline">
+      Add education entries here
+    </div>
+  </section>
+  -->
 
-          emailjs.sendForm("service_4wiq9ec", "template_5pmpwv9", this).then(
-            function () {
-              Swal.fire({
-                icon: "success",
-                title: "Message Sent",
-                text: "Your message has been sent successfully!",
-              });
-            },
-            function (error) {
-              Swal.fire({
-                icon: "error",
-                title: "Failed to Send",
-                text: "Failed to send message. Please try again later.",
-              });
-              console.error("Error:", error);
-            }
-          );
-        });
-    </script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+
+  <script>
+    (function () { emailjs.init("PMHnYqoDKzi7TAc4u"); })();
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs.sendForm("service_4wiq9ec", "template_5pmpwv9", this).then(
+        function () {
+          Swal.fire({
+            icon: "success", title: "Message Sent",
+            text: "Your message has been sent successfully!",
+            background: "#111827", color: "#F9FAFB", confirmButtonColor: "#3B82F6"
+          });
+        },
+        function (error) {
+          Swal.fire({
+            icon: "error", title: "Failed to Send",
+            text: "Failed to send message. Please try again later.",
+            background: "#111827", color: "#F9FAFB", confirmButtonColor: "#3B82F6"
+          });
+          console.error("EmailJS error:", error);
+        }
+      );
+    });
+  </script>
+
+</body>
 </html>
