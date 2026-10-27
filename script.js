@@ -4,6 +4,7 @@ AOS.init({
   once: true,
   easing: 'ease-out-cubic',
   offset: 56,
+  disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 });
 
 // ─── DOM references (all declared before any function is called) ───
@@ -11,7 +12,7 @@ const header     = document.getElementById('header');
 const navToggle  = document.getElementById('nav-toggle');
 const navList    = document.getElementById('nav-list');
 const toggleIcon = navToggle.querySelector('i');
-const sections   = Array.from(document.querySelectorAll('section[id]'));
+const sections   = Array.from(document.querySelectorAll('section[id]:not([hidden])'));
 const navLinks   = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
 
 // ─── Functions ───
